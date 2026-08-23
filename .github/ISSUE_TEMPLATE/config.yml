@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: s&box engine issues
+    url: https://github.com/Facepunch/sbox-issues/issues
+    about: Report problems in the s&box engine or official Facepunch packages here.
