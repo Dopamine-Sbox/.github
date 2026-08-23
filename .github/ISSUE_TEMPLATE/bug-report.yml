@@ -1,0 +1,66 @@
+name: Bug report
+description: Report a reproducible problem in a Dopamine-Sbox project
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping us improve the project. Remove credentials, private endpoints, player identifiers, and other sensitive information before submitting.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for this problem.
+          required: true
+        - label: I read the repository documentation and troubleshooting guidance.
+          required: true
+        - label: I removed secrets and private information from this report.
+          required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Project version or revision
+      description: Provide the release, commit SHA, container tag, or image digest.
+      placeholder: v1.2.3 or 0123456789abcdef
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include OS, architecture, runtime, hardware, and relevant panel or container versions.
+      placeholder: Ubuntu 26.04 amd64, native Linux server, 8 GiB RAM...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: List the smallest repeatable sequence that demonstrates the problem.
+      placeholder: |
+        1. Configure...
+        2. Start...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted logs or screenshots
+      description: Drag files here or paste relevant logs. Never include tokens or passwords.
+      render: shell
