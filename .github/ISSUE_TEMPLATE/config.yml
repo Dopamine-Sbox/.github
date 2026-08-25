@@ -3,3 +3,9 @@ contact_links:
   - name: s&box engine issues
     url: https://github.com/Facepunch/sbox-issues/issues
     about: Report problems in the s&box engine or official Facepunch packages here.
+  - name: Dopamine-Sbox GitHub workflow
+    url: https://github.com/Dopamine-Sbox/.github/blob/main/GITHUB_WORKFLOW.md
+    about: Read how we use issues, labels, pull requests, releases, and automation.
+  - name: Repository template backlog
+    url: https://github.com/Dopamine-Sbox/.github/blob/main/TEMPLATE_REPOSITORIES.md
+    about: Review planned starter repositories for s&box, hosting, bots, and docs.

@@ -1,0 +1,13 @@
+# Default organization ownership.
+#
+# Repository-specific CODEOWNERS files should replace this with concrete teams.
+# Pair this with branch protection or repository rulesets that require code-owner
+# review for protected branches.
+
+* @Dopamine-Sbox/maintainers
+
+/.github/ @Dopamine-Sbox/maintainers
+/SECURITY.md @Dopamine-Sbox/maintainers
+/SUPPORT.md @Dopamine-Sbox/maintainers
+/CODE_OF_CONDUCT.md @Dopamine-Sbox/maintainers
+/CONTRIBUTING.md @Dopamine-Sbox/maintainers

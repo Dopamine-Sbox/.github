@@ -23,6 +23,7 @@ We also collaborate with other s&box community projects, including the
 - dedicated-server deployment and lifecycle tooling;
 - reproducible server benchmarks and compatibility testing;
 - s&box games, editor tooling, and developer integrations;
+- reusable s&box game, addon, library, map, and tooling templates;
 - community services that connect s&box with other platforms.
 
 ## Contributing and support
@@ -34,6 +35,10 @@ runtime, game package, reproduction steps, and redacted logs.
 Please read our shared [contribution guidelines](https://github.com/Dopamine-Sbox/.github/blob/main/CONTRIBUTING.md),
 [support guidance](https://github.com/Dopamine-Sbox/.github/blob/main/SUPPORT.md), and
 [security policy](https://github.com/Dopamine-Sbox/.github/blob/main/SECURITY.md).
+The shared [GitHub workflow](https://github.com/Dopamine-Sbox/.github/blob/main/GITHUB_WORKFLOW.md)
+and [template backlog](https://github.com/Dopamine-Sbox/.github/blob/main/TEMPLATE_REPOSITORIES.md)
+document how we organize issues, pull requests, reusable repo starters, and
+server-hosting validation.
 
 > Dopamine-Sbox is a community organization and is not affiliated with or
 > endorsed by Facepunch Studios. s&box is a product of Facepunch Studios.

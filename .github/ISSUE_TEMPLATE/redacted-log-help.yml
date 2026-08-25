@@ -1,0 +1,39 @@
+name: Redacted log help
+description: Ask for help preparing safe logs before filing a bug
+title: "[Redaction Help]: "
+labels:
+  - needs-redaction
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste the sensitive log. Describe the log source and what kind of data it contains so maintainers can tell you what to remove.
+  - type: dropdown
+    id: source
+    attributes:
+      label: Log source
+      options:
+        - s&box dedicated server
+        - s&box editor
+        - Pterodactyl or Pelican panel
+        - Discord bot or webhook
+        - Cloudflare Worker
+        - CI workflow
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: contents
+    attributes:
+      label: Sensitive fields present
+      description: List the kinds of sensitive data present, not the values.
+      placeholder: Panel URL, IP address, Steam key, Discord token, player IDs...
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to report?
+      description: Briefly describe the issue you want to file after redaction.
+    validations:
+      required: true

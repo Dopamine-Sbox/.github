@@ -11,6 +11,15 @@ Before requesting support:
 3. Reproduce the problem with the documented configuration when possible.
 4. Collect the exact revision, environment, configuration, and redacted logs.
 
+Use the most specific issue form available:
+
+- s&box routing for deciding whether a report belongs to our project or upstream
+  s&box;
+- server hosting reports for native Linux, Wine, Pterodactyl, and Pelican
+  behavior;
+- gameplay feedback for playtest observations and balance notes;
+- redacted log help when you need guidance preparing safe logs.
+
 Do not publish access tokens, server tokens, passwords, private panel URLs,
 private IP addresses, or personal information. Follow the
 [security policy](SECURITY.md) for vulnerabilities and credential exposure.

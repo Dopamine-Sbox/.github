@@ -1,0 +1,95 @@
+name: Server hosting report
+description: Report dedicated-server, Pterodactyl, Pelican, native Linux, or Wine behavior
+title: "[Server]: "
+labels:
+  - server-hosting
+  - needs-repro
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Remove Steam keys, panel API keys, Discord tokens, private panel URLs, private IPs, user identifiers, and passwords before submitting.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I tested with the documented configuration or explained what differed.
+          required: true
+        - label: I removed secrets and private infrastructure details.
+          required: true
+        - label: I searched existing issues for this behavior.
+          required: true
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Runtime
+      options:
+        - Native Linux
+        - Wine on Linux
+        - Windows
+        - Pterodactyl
+        - Pelican
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: artifact
+    attributes:
+      label: Artifact, egg, or image version
+      description: Release, commit SHA, container image digest, or egg version.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, architecture, panel version, Docker image, CPU/RAM, and relevant launch settings.
+    validations:
+      required: true
+  - type: dropdown
+    id: affected_phase
+    attributes:
+      label: Affected phase
+      options:
+        - Install
+        - Startup
+        - Readiness
+        - Query visibility
+        - Client join
+        - Map/game rotation
+        - Console input
+        - Graceful stop
+        - Forced stop
+        - Artifact publishing
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Configure...
+        2. Start...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted logs
+      description: Paste only the relevant redacted output.
+      render: shell

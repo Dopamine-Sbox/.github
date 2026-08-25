@@ -1,0 +1,58 @@
+name: s&box project routing
+description: Check whether a report belongs to this project or the s&box engine
+title: "[s&box Routing]: "
+labels:
+  - sbox-engine
+  - needs-repro
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when you are unsure whether the problem belongs here or in Facepunch/sbox-issues. Do not include secrets, private endpoints, player identifiers, or unredacted logs.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Our game code or addon
+        - Our tooling or scripts
+        - Our docs or packaging
+        - s&box engine/editor behavior
+        - Unsure
+    validations:
+      required: true
+  - type: input
+    id: project_revision
+    attributes:
+      label: Project revision
+      description: Commit SHA, release, package version, or artifact digest.
+    validations:
+      required: true
+  - type: input
+    id: sbox_revision
+    attributes:
+      label: s&box or sbox-public revision
+      description: Include the editor/game build or sbox-public commit when relevant.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Behavior summary
+      description: Explain what happened and why you think it may belong here.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest repeatable case you have.
+      placeholder: |
+        1. Open...
+        2. Run...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted evidence
+      description: Add logs, screenshots, videos, or links. Redact secrets and private data.
