@@ -1,31 +1,44 @@
-# Security policy
+# Security Policy & Secret Management
 
-## Supported versions
+The **Dopamine-Sbox** organization enforces strict security standards to protect game source code, player authentication services, dedicated servers, and developer credentials.
 
-Security fixes are normally applied to the latest version on the default branch
-and, when the repository publishes releases, the latest supported release.
+---
 
-## Reporting a vulnerability
+## 🛡️ Comprehensive Security Documentation
 
-Please do not disclose a vulnerability, credential, private endpoint, or exploit
-in a public issue, pull request, discussion, log, or screenshot.
+For exhaustive guides on secret management, pre-commit scanners, session token safety, and emergency git scrubbing, consult our central knowledge base:
 
-Use the affected repository's **Security** tab and select **Report a
-vulnerability** when private vulnerability reporting is available. Include:
+- 📖 [**Special-Documentation / Security & Credentials Hub**](https://github.com/Dopamine-Sbox/Special-Documentation/tree/main/security-and-credentials)
+- 🔐 [**Commit & PR Security (Signing & Pre-commit Scanners)**](https://github.com/Dopamine-Sbox/Special-Documentation/blob/main/security-and-credentials/commit-and-pr-security.md)
+- 🔑 [**Credentials & Secrets Management (`.env` & Vaults)**](https://github.com/Dopamine-Sbox/Special-Documentation/blob/main/security-and-credentials/credentials-and-secrets-management.md)
+- 🍪 [**Sessions, Cookies & Logins Protection**](https://github.com/Dopamine-Sbox/Special-Documentation/blob/main/security-and-credentials/sessions-cookies-and-logins.md)
+- 🛡️ [**Universal `.gitignore` Template**](https://github.com/Dopamine-Sbox/Special-Documentation/blob/main/security-and-credentials/universal-gitignore-rules.md)
+- 🚨 [**Incident Response & Secret Revocation Runbook**](https://github.com/Dopamine-Sbox/Special-Documentation/blob/main/security-and-credentials/incident-response-and-revocation.md)
 
-- the affected repository and revision;
-- the security impact and affected users or systems;
-- minimal reproduction steps or a proof of concept;
-- suggested mitigations, if known;
-- whether the issue is already public or being actively exploited.
+---
 
-If private vulnerability reporting is unavailable, open a minimal issue asking
-the maintainers to establish private contact. Do not include vulnerability
-details in that issue.
+## 📋 Supported Versions
 
-We will acknowledge a complete report as soon as practical, investigate it, and
-coordinate remediation and disclosure with the reporter. Please allow time for
-a fix before public disclosure.
+Security fixes are actively applied to the latest version on the default branch (`main`) across all repositories and published releases.
 
-For leaked third-party credentials, revoke or rotate the credential immediately
-and follow the issuing provider's incident-response guidance.
+---
+
+## 🚨 Reporting a Vulnerability
+
+**Please do not disclose a vulnerability, credential, private endpoint, token, or exploit in a public issue, pull request, discussion, log, or screenshot.**
+
+1. Navigate to the affected repository's **Security** tab and click **Report a vulnerability** to open a private advisory.
+2. Include:
+   - Affected repository and commit SHA;
+   - Security impact and affected systems;
+   - Minimal reproduction steps or proof-of-concept;
+   - Whether the issue is actively being exploited.
+3. If private reporting is unavailable, open a minimal issue requesting private contact with maintainers without including vulnerability details.
+
+---
+
+## 🔑 Leaked Credentials & Immediate Remediation
+
+If a third-party secret (Steam Web API Key, Discord Bot Token, Cloudflare Token, RCON Password, Browser Cookie) is accidentally committed:
+1. **Revoke and rotate the credential immediately** at the issuing service provider.
+2. Follow our [Incident Response Runbook](https://github.com/Dopamine-Sbox/Special-Documentation/blob/main/security-and-credentials/incident-response-and-revocation.md) to purge the git history via `git-filter-repo`.
